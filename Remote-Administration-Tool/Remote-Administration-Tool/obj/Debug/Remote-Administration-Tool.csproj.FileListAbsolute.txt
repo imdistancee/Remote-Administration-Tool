@@ -1,0 +1,11 @@
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\bin\Debug\Remote-Administration-Tool.exe.config
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\bin\Debug\Remote-Administration-Tool.exe
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\bin\Debug\Remote-Administration-Tool.pdb
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\obj\Debug\Remote-Administration-Tool.csprojResolveAssemblyReference.cache
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\obj\Debug\Remote_Administration_Tool.Properties.Resources.resources
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\obj\Debug\Remote-Administration-Tool.csproj.GenerateResource.Cache
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\obj\Debug\Remote-Administration-Tool.exe
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\obj\Debug\Remote-Administration-Tool.pdb
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\obj\Debug\Remote_Administration_Tool.Forms.MainForm.resources
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\obj\Debug\Remote_Administration_Tool.Forms.ScreenCapture.resources
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Remote-Administration-Tool\obj\Debug\Remote_Administration_Tool.Forms.TaskManager.resources

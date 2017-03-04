@@ -1,0 +1,8 @@
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Stub\bin\Debug\Stub.exe.config
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Stub\bin\Debug\Stub.exe
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Stub\bin\Debug\Stub.pdb
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Stub\obj\Debug\Stub.Properties.Resources.resources
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Stub\obj\Debug\Stub.csproj.GenerateResource.Cache
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Stub\obj\Debug\Stub.exe
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Stub\obj\Debug\Stub.pdb
+C:\Users\chris\Documents\GitHub\Remote-Administration-Tool\Remote-Administration-Tool\Stub\obj\Debug\Stub.Forms.StubForm.resources
