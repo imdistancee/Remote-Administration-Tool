@@ -46,8 +46,8 @@ namespace Remote_Administration_Tool.Forms
                     //clears the listview
                     lstTasks.Invoke(new Action(() => lstTasks.Items.Clear()));
 
-                    //splits the string by |||
-                    string[] splitter = dataString.Split(new string[] { "|||" }, StringSplitOptions.None);
+                    //splits the string by a new line
+                    string[] splitter = dataString.Split('\n');
                     //loops the split 
                     for (int i = 0, l = splitter.Length; i < l; i++)
                     {
@@ -56,19 +56,18 @@ namespace Remote_Administration_Tool.Forms
 
                         //adds the process name to listviewitem
                         ListViewItem lvi = new ListViewItem(_splitter[0]);
-                        //adds the window title to listviewitem
                         try
                         {
+                            //adds the window title to listviewitem
                             lvi.SubItems.Add(_splitter[1]);
+                            //adds the listviewitem to listview
+                            lstTasks.Invoke(new Action(() => lstTasks.Items.Add(lvi)));
                         }
-                        catch
+                        catch (Exception ex)
                         {
-                            //bug fix. window title sometimes throws an exception
-                            lvi.SubItems.Add("??");
+                            //writes the stack trace to the console. stack trace includes line number + exactly whats happening.
+                            Console.WriteLine(ex.StackTrace);
                         }
-
-                        //adds the listviewitem to listview
-                        lstTasks.Invoke(new Action(() => lstTasks.Items.Add(lvi)));
                     }
                 }
             }
@@ -86,6 +85,8 @@ namespace Remote_Administration_Tool.Forms
 
         public void RefreshList()
         {
+            //clears the listview
+            lstTasks.Items.Clear();
             //sends command for getting tasks.
             serverSocket.SendData(string.Empty, Helpers.CommandHandler.Commands.TASK_LIST, clientSocket);
         }
@@ -113,10 +114,10 @@ namespace Remote_Administration_Tool.Forms
                     //sends data to client to kill the task
                     serverSocket.SendData(item.Text, Helpers.CommandHandler.Commands.KILL_TASK, clientSocket);
                 }
-
-                //sends command for getting tasks. (refresh list)
-                RefreshList();
             }
+
+            //sends command for getting tasks. (refresh list)
+            RefreshList();
         }
 
         private void btnStartNew_Click(object sender, EventArgs e)

@@ -51,6 +51,8 @@ namespace Stub.Helpers
                 {
                     //failed to connect to socket
                     Console.WriteLine("failed to connect");
+                    //stops the thread for 1 second
+                    System.Threading.Thread.Sleep(1000);
                 }
             }
         }

